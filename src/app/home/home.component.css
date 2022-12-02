@@ -1,0 +1,37 @@
+
+.header {
+  background: url("/assets/imagenes/Avril-Lavigne-Home.png") no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+}
+.header .navbar {
+  background-color: transparent !important;
+}
+
+.fondo {
+  background-color: black;
+}
+
+.nohover a:hover {
+  background-color: transparent!important;
+}
+
+i {
+  color:white;
+}
+
+a:hover {
+  background-color: black!important;
+  transition: background-color .5s;
+}
+
+
+.btn {
+  background-color: red!important;
+  font-weight: bold;
+  color:white;
+  border: none ;
+  border-radius: 0%;
+}
+
+

@@ -1,0 +1,136 @@
+<header class="header">
+  <!--NAV BAR -->
+  <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+        aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="nohover">
+        <a class="navbar-brand" href="/home"><img src="assets/imagenes/Avril-Lavigne-logo.png">
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <div class="navbar-nav me-auto mb-2 mb-lg-0">
+          <a class="btn btn-danger nav-link me-3" href="/home#tour">TOUR</a>
+          <a class="btn btn-danger nav-link me-3" href="/home#videos">VIDEOS </a>
+          <a class="btn btn-danger nav-link me-3" href="/home#musica">MÚSICA</a>
+          <a class="btn btn-danger nav-link me-3" href="/home#fotos">FOTOS </a>
+          <a class="btn btn-danger nav-link me-3" href="/home#abbeydawn">ABBEY DOWN CLOTHING </a>
+        </div>
+
+        <div class="nohover">
+          <div class="nav navbar-nav navbar-right list-group-horizontal">
+            <a class="nav-link sin-borde " href="https://www.facebook.com/avrillavigne/" title="Ir a Facebook"
+              target="_blank"><i class="bi bi-facebook"></i></a>
+            <a class="nav-link sin-borde " href="https://twitter.com/AVRILLAVIGNE" title="Ir a Twitter"
+              target="_blank"><i class="bi bi-twitter ms-3 ms-lg-0"></i></a>
+            <a class="nav-link sin-borde " href="https://www.instagram.com/avrillavigne/" title="Ir a Instagram"
+              target="_blank"><i class="bi bi-instagram ms-3 ms-lg-0"></i></a>
+            <a class="nav-link sin-borde " href="https://www.youtube.com/avrillavigne" title="Ir a Youtube"
+              target="_blank"><i class="bi bi-youtube ms-3 ms-lg-0"></i></a>
+            <a class="nav-link sin-borde " href="https://open.spotify.com/artist/0p4nmQO2msCgU4IF37Wi3j"
+              title="Ir a Spotify" target="_blank"><i class="bi bi-spotify ms-3 ms-lg-0"></i></a>
+            <a *ngIf="!usuario" class="nav-link sin-borde " routerLink="/iniciar-sesion" title="Iniciar sesión"><i
+                class="bi bi-person ms-3 ms-lg-0 me-2"></i></a>
+            <a href="/home" *ngIf="usuario" (click)="cerrarSesion()" class="nav-link sin-borde" title="Salir"><i
+                class="bi bi-box-arrow-in-right ms-3 ms-lg-0"></i></a>
+            <div class="nav-link sin-borde ms-2" *ngIf="usuario"> {{usuario}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="fondo">
+  <div class="container mb-3">
+
+
+    <!--TOUR-->
+    <div class="d-flex justify-content-center pt-5 mb-5" id="tour">
+      <img src="assets/imagenes/title-tour.png">
+    </div>
+    <app-listado-conciertos></app-listado-conciertos>
+
+    <!--VIDEOS-->
+    <div class="d-flex justify-content-center mt-3 mb-5" id="videos">
+      <img src="assets/imagenes/video.png">
+    </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="mb-3 embed-responsive-item" width="100%" height="800"
+        src="https://www.youtube.com/embed/0zmpuehm3UA" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <app-listado-videos></app-listado-videos>
+
+    <!--CARROUSEL 1 videos LIVE-->
+    <app-carrousel1></app-carrousel1>
+
+    <!--MUSIC -->
+    <div class="d-flex justify-content-center mt-5 mb-5" id="musica">
+      <img src="assets/imagenes/title-music.png">
+    </div>
+
+    <!--ALBUM HOVER -->
+    <app-album-hover1></app-album-hover1>
+    <div class="row row-cols-1 mt-3">
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <app-album-hover2></app-album-hover2>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <app-album-hover3></app-album-hover3>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <app-album-hover4></app-album-hover4>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+        <app-album-hover5></app-album-hover5>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+        <app-album-hover6></app-album-hover6>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 mt-2">
+        <app-album-hover7></app-album-hover7>
+      </div>
+    </div>
+
+    <!--FOTOS -->
+    <div class="d-flex justify-content-center mt-5 mb-5" id="fotos">
+      <img src="assets/imagenes/title-phtos.png">
+    </div>
+    <app-instagram></app-instagram>
+  </div>
+  <!--ABBEY DAWN-->
+  <div class="d-flex justify-content-center mt-5 mb-5" id="abbeydawn">
+    <img src="assets/imagenes/abbeydawn-logo.gif">
+  </div>
+
+  <app-carrousel2></app-carrousel2>
+
+  <!--Scroll to top-->
+  <app-scroll-to-top></app-scroll-to-top>
+
+  <!--FOOTER-->
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="ms-3"><a class="nav-link sin-borde " href="https://www.facebook.com/avrillavigne/"
+          title="Ir a facebook" target="_blank"><i class="bi bi-facebook"></i></a></li>
+      <li class="ms-3"><a class="nav-link sin-borde " href="https://twitter.com/AVRILLAVIGNE" title="Ir a Twitter"
+          target="_blank"><i class="bi bi-twitter ms-3 ms-lg-0"></i></a></li>
+      <li class="ms-3"> <a class="nav-link sin-borde " href="https://www.instagram.com/avrillavigne/"
+          title="Ir a Instagram" target="_blank"><i class="bi bi-instagram ms-3 ms-lg-0"></i></a></li>
+      <li class="ms-3"> <a class="nav-link sin-borde " href="https://www.youtube.com/avrillavigne" title="Ir a Youtube"
+          target="_blank"><i class="bi bi-youtube ms-3 ms-lg-0"></i></a></li>
+      <li class="ms-3"> <a class="nav-link sin-borde " href="https://open.spotify.com/artist/0p4nmQO2msCgU4IF37Wi3j"
+          title="Ir a spotify" target="_blank"><i class="bi bi-spotify"></i></a></li>
+      <li class="ms-2"><a *ngIf="!usuario" class="nav-link sin-borde " routerLink="/iniciar-sesion"
+          title="Iniciar sesión" target="_blank"><i class="bi bi-person ms-3 ms-lg-0"></i></a></li>
+      <li><a href="/home" *ngIf="usuario" (click)="cerrarSesion()" class="nav-link sin-borde" title="Salir"><i
+            class="bi bi-box-arrow-in-right"></i></a></li>
+      <li><a class="nav-link sin-borde text-white" *ngIf="usuario">{{usuario}}</a></li>
+    </ul>
+    <p class="text-center text-muted">&copy; Copyright 2022 Avril Lavigne</p>
+  </footer>
+</div>

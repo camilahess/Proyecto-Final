@@ -1,0 +1,61 @@
+<div class="fondo">
+  <div class="container bg-dark text-white">
+    <a class="nav-link sin-borde " href="/home" title="Volver al inicio"><i class="bi bi-backspace-fill"></i> </a>
+    <h1 class="mb-3"> INICIAR SESIÓN </h1>
+
+    <form method="post">
+      <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+      <div class="input-group mb-3">
+        <input name="email" placeholder="Escriba aquí su correo" required type="email" [(ngModel)]="usuario.correo" #usuarioModel="ngModel"
+          class="form-control" id="exampleInputEmail1" aria-describedby="correoo"
+          [ngClass]="validClasses(usuarioModel, 'is-valid', 'is-invalid')">
+          <span class="input-group-text" id="correoo">@example.com</span>
+
+      </div>
+
+
+        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+        <div class="input-group mb-3">
+        <input
+        name="password"
+        required
+        [type]="fieldTextType ? 'text' : 'password'"
+        [(ngModel)]="usuario.password"
+        #passwordModel="ngModel"
+        class="form-control"
+        id="exampleInputPassword1"
+        aria-describedby="contrasenia"
+        [ngClass]="validClasses(passwordModel, 'is-valid', 'is-invalid')">
+          <span class="input-group-text " id="contrasenia">
+            <i
+            class="bi"
+            [ngClass]="{
+            'bi-eye-slash': !fieldTextType,
+            'bi-eye': fieldTextType
+        }"
+        (click)="toggleFieldTextType()"></i></span>
+      </div>
+      <button type="submit" class="btn btn-danger mb-3" (click)="postUsuario()">Enviar</button>
+    </form>
+
+    <img src="assets/imagenes/wallpaper.jpg" class="img-fluid">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="ms-3"><a class="nav-link sin-borde " href="https://www.facebook.com/avrillavigne/"
+            title="Ir a facebook" target="_blank"><i class="bi bi-facebook"></i></a></li>
+        <li class="ms-3"><a class="nav-link sin-borde " href="https://twitter.com/AVRILLAVIGNE" title="Ir a Twitter"
+            target="_blank"><i class="bi bi-twitter ms-3 ms-lg-0"></i></a></li>
+        <li class="ms-3"> <a class="nav-link sin-borde " href="https://www.instagram.com/avrillavigne/"
+            title="Ir a Instagram" target="_blank"><i class="bi bi-instagram ms-3 ms-lg-0"></i></a></li>
+        <li class="ms-3"> <a class="nav-link sin-borde " href="https://www.youtube.com/avrillavigne"
+            title="Ir a Youtube" target="_blank"><i class="bi bi-youtube ms-3 ms-lg-0"></i></a></li>
+        <li class="ms-3"> <a class="nav-link sin-borde " href="https://open.spotify.com/artist/0p4nmQO2msCgU4IF37Wi3j"
+            title="Ir a spotify" target="_blank"><i class="bi bi-spotify"></i></a></li>
+        <li class="ms-3"> <a class="nav-link sin-borde " href="/home" title="Volver al inicio"><i
+              class="bi bi-house"></i></a></li>
+      </ul>
+      <p class="text-center text-muted">&copy; Copyright 2022 Avril Lavigne</p>
+    </footer>
+
+  </div>
+</div>

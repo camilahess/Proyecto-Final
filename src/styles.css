@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../node_modules/sweetalert2/dist/sweetalert2.css";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.swal2-container .swal2-styled  {
+  background-color: white!important;
+  color: black!important;
+  border-color: white!important;
+
+}
+
+.swal2-html-container {
+  background-color: black!important;
+  color: white!important;
+}
+
+.swal2-icon-success {
+  background-color: black!important;
+}
+

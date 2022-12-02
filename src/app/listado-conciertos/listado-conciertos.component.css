@@ -1,0 +1,9 @@
+.btn {
+  background-color: red;
+  border: none;
+}
+
+a:hover {
+  background-color: black!important;
+  transition: background-color .5s;
+}

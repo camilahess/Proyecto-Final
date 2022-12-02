@@ -1,0 +1,44 @@
+/*  HOVER 1 */
+.border-danger {
+  border-color: red!important;
+}
+
+.imagen {
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagen:hover footer {
+  width: 100%;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto;
+
+}
+
+.imagen footer {
+  width: 0;
+  height: 100%;
+  background: rgba(11, 11, 11, 0.71);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 400ms ease-in-out;
+}
+
+footer p {
+  font-style: oblique;
+  color: #fff;
+  font-size: 3rem;
+  height: 70px;
+  overflow: hidden;
+  text-shadow: 2px 2px 2px #FF0000;;
+}
+
+
