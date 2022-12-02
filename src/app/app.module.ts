@@ -27,6 +27,7 @@ import { HomeComponent } from './home/home.component';
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent, pathMatch: 'full' },//pantalla principal localhost:4200
   { path: 'iniciar-sesion', component: IniciarSesionComponent },
+  { path: '', redirectTo: "/home", pathMatch: 'full' }
 
 ];
 
